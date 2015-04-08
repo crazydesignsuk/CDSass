@@ -1,0 +1,145 @@
+///////////////////////////////////////
+//  Tables
+///////////////////////////////////////
+
+// Tables
+table {
+	max-width: 100%;
+	background-color: #fff;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th {
+	text-align: left;
+}
+
+
+// BASELINE STYLES
+.table {
+	width: 100%;
+	margin-bottom: $base-spacing;
+
+    // Cells
+    th,
+    td {
+    	padding: 8px;
+    	line-height: $base-spacing;
+    	vertical-align: top;
+    	border-top: 1px solid $c-table-border;
+    }
+    // Bottom align for column headings
+    thead th {
+    	vertical-align: bottom;
+    	font-weight: $bold;
+    }
+    // Remove top border from thead by default
+    caption + thead tr:first-child th,
+    caption + thead tr:first-child td,
+    colgroup + thead tr:first-child th,
+    colgroup + thead tr:first-child td,
+    thead:first-child tr:first-child th,
+    thead:first-child tr:first-child td {
+    	border-top: 0;
+    }
+}
+
+
+// BORDERED VERSION
+.table-bordered {
+	border: 1px solid $c-table-border;
+    border-collapse: separate; // Done so we can round those corners!
+    border-left: 0;
+    border-radius: 5px;
+    th,
+    td {
+    	border-left: 1px solid $c-table-border;
+    }
+    // Prevent a double border
+    caption + thead tr:first-child th,
+    caption + tbody tr:first-child th,
+    caption + tbody tr:first-child td,
+    colgroup + thead tr:first-child th,
+    colgroup + tbody tr:first-child th,
+    colgroup + tbody tr:first-child td,
+    thead:first-child tr:first-child th,
+    tbody:first-child tr:first-child th,
+    tbody:first-child tr:first-child td {
+    	border-top: 0;
+    }
+    // For first th/td in the first row in the first thead or tbody
+    thead:first-child tr:first-child > th:first-child,
+    tbody:first-child tr:first-child > td:first-child,
+    tbody:first-child tr:first-child > th:first-child {
+    	border-top-left-radius: 5px;
+    }
+    // For last th/td in the first row in the first thead or tbody
+    thead:first-child tr:first-child > th:last-child,
+    tbody:first-child tr:first-child > td:last-child,
+    tbody:first-child tr:first-child > th:last-child {
+    	border-top-right-radius: 5px;
+    }
+    // For first th/td (can be either) in the last row in the last thead, tbody, and tfoot
+    thead:last-child tr:last-child > th:first-child,
+    tbody:last-child tr:last-child > td:first-child,
+    tbody:last-child tr:last-child > th:first-child,
+    tfoot:last-child tr:last-child > td:first-child,
+    tfoot:last-child tr:last-child > th:first-child {
+    	border-bottom-left-radius: 5px;
+    }
+    // For last th/td (can be either) in the last row in the last thead, tbody, and tfoot
+    thead:last-child tr:last-child > th:last-child,
+    tbody:last-child tr:last-child > td:last-child,
+    tbody:last-child tr:last-child > th:last-child,
+    tfoot:last-child tr:last-child > td:last-child,
+    tfoot:last-child tr:last-child > th:last-child {
+    	border-bottom-right-radius: 5px;
+    }
+
+    // Clear border-radius for first and last td in the last row in the last tbody for table with tfoot
+    tfoot + tbody:last-child tr:last-child td:first-child {
+    	border-bottom-left-radius: 0;
+    }
+    tfoot + tbody:last-child tr:last-child td:last-child {
+    	border-bottom-right-radius: 0;
+    }
+
+    // Special fixes to round the left border on the first td/th
+    caption + thead tr:first-child th:first-child,
+    caption + tbody tr:first-child td:first-child,
+    colgroup + thead tr:first-child th:first-child,
+    colgroup + tbody tr:first-child td:first-child {
+    	border-top-left-radius: 5px;
+    }
+    caption + thead tr:first-child th:last-child,
+    caption + tbody tr:first-child td:last-child,
+    colgroup + thead tr:first-child th:last-child,
+    colgroup + tbody tr:first-child td:last-child {
+    	border-top-right-radius: 5px;
+    }
+
+}
+
+
+
+// ZEBRA-STRIPING
+// -------
+
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+.table-striped {
+	tr:nth-child(2n) {
+		background-color: #f8f8f8;
+	}
+}
+
+
+
+// HOVER EFFECT
+// ------
+// Placed here since it has to come after the potential zebra striping
+.table-hover {
+	tr:hover > td {
+		background-color: $c-primary;
+		color: $c-white;
+	}
+}
+

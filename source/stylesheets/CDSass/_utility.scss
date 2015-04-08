@@ -1,0 +1,59 @@
+///////////////////////////////////////
+//  Utility
+///////////////////////////////////////
+
+
+// border box
+
+@mixin borderbox {	box-sizing: border-box; }
+
+
+// clearfix
+
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// transition
+
+@mixin transition($time) {
+	transition: all $time ease-in-out;
+}
+
+// absolute center
+
+@mixin verticalalign {
+	position: relative;
+	top: 50%;
+	transform: translate3d(0,-50%,0);
+}
+
+
+// font smooothing
+
+@mixin font-smoothing($value: on) {
+	@if $value == on {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	@else {
+		-webkit-font-smoothing: subpixel-antialiased;
+		-moz-osx-font-smoothing: auto;
+	}
+}
+
+
+// sets text color to black or white based on lightness of background
+
+@function dynamic-text-color($color) {
+	@if (lightness($color) > 60) {
+	    @return #000000; // Lighter background, return dark color
+	} 
+	@else {
+	    @return #ffffff; // Darker background, return light color
+	}
+}

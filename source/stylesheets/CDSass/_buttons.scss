@@ -1,0 +1,107 @@
+///////////////////////////////////////
+//  Buttons
+///////////////////////////////////////
+
+
+.btn {
+	font-size: $button-font-size;
+    border: none; // remove default button style
+    font-family: $base-font-family;
+    font-weight: $button-font-weight;
+    background: $c-tint-d-4;
+    color: $c-tint-d-2;
+    padding: ($button-font-size * 0.8) ($button-font-size * 1.2);
+    @include transition($button-time);
+    border-radius: $button-border-radius;
+    line-height: $button-font-size;
+    display: inline-block;
+    &:hover {
+        border: none; // reset default anchor style
+        cursor: pointer;
+        background: $c-tint-d-3;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+// Color variations
+
+$buttoncolors:
+(default, $c-tint-d-4),
+(primary, $c-primary),
+(secondary, $c-secondary),
+(success, $c-success),
+(alert, $c-alert),
+(warning, $c-warning),
+(info, $c-info),
+("white", $c-white);
+
+@each $buttoncolor, $color in $buttoncolors {
+	.btn--#{$buttoncolor} {
+		background-color: $color;
+		color: dynamic-text-color($color);
+		&:hover {
+			background: darken($color, 5);
+			color: dynamic-text-color(darken($color, 10));
+			outline: none;
+		}
+	}
+}
+
+// button border
+
+@each $buttoncolor, $color in $buttoncolors {
+	.btn__border--#{$buttoncolor} {
+		color: $color;
+		border: solid $button-border-width;
+		background: none;
+		&:hover {
+			background: $color;
+			color: $c-white;
+			outline: none;
+			border: solid $button-border-width $color;
+		}
+	}
+}
+
+// fix for white border button hover
+
+.btn__border--white:hover {
+	color: $c-primary;
+}
+
+// other variations
+.btn--large { font-size: $button-font-large; padding: $button-font-large ($button-font-large * 1.4);}
+.btn--small { font-size: $button-font-small; padding: ($button-font-small / 2) ($button-font-small * 1.2);}
+.btn--disabled { cursor: not-allowed !important; }
+.btn--caps { text-transform: uppercase; }
+.btn__icon--left {i { padding-right: 0.5em}}
+.btn__icon--right {i { padding-left: 0.5em}}
+.btn--block { display: block; text-align: center;}
+
+
+// quick set icons of fa
+
+$buttonicons:
+(next, "\f105"),
+(nextdouble, "\f101"),
+(back, "\f104"),
+(backdouble, "\f100"),
+(tick, "\f00c"),
+(cross, "\f00d"),
+(heart, "\f08a"),
+(warning, "\f071");
+
+
+@each $iconname, $icon in $buttonicons {
+	.btn__#{$iconname}--before::before {
+		font-family: 'FontAwesome';
+		padding-right: 0.5em;
+		content: "#{$icon}";
+	}
+	.btn__#{$iconname}--after::after {
+		font-family: 'FontAwesome';
+		padding-left: 0.5em;
+		content: "#{$icon}";
+	}
+}

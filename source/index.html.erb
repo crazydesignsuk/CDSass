@@ -1,0 +1,193 @@
+---
+title: CDSass
+---
+
+<div class="t-center">
+	<img src="/stylesheets/CDSass/logo@2x.png" style="max-width: 540px">
+</div>
+
+<div style="width: 700px; margin: 0 auto 100px">
+
+	<section class="section" id="intro">
+		<p>CDSass is a collection of default styles to be used with my own web projects to reduce the need of writing similar code at the start of each site. <strong>this is not designed to be a bootstrap replacement!</strong></p>
+		<p>It contains default stylings for typography, buttons, tables, and a basic grid. Things can be changed in the main <code>CDSass.scss</code> file.</p>
+	</section>
+
+	<hr />
+
+	<ul class="list--inline">
+		<li><a href="#grid">Grid</a></li>
+		<li><a href="#typography">Typography</a></li>
+		<li><a href="#buttons">Buttons</a></li>
+		<li><a href="#tables">Tables</a></li>
+	</ul>
+
+	<hr />
+
+	<section class="section" id="typography">
+
+		<h2>Typography</h2>
+
+		<h1 class="giga">Giga Heading</h1>
+		<h1 class="mega">Mega Heading</h1>
+		<h1 class="kilo">Kilo Heading</h1>
+		<h1>H1 / alpha Heading</h1>
+		<h2>H2 / beta Heading</h2>
+		<h3>H3 / gamma Heading</h3>
+		<h4>H4 / delta Heading</h4>
+		<h5>H5 / epsilon Heading</h5>
+		<h6>H6 / zita Heading</h6>
+
+		<p class="large">Large paragraph text - Bacon ipsum <a href="#">this is a link</a> dolor amet spare ribs brisket hamburger chicken shank sirloin pastrami shoulder <strong>this text is strong</strong> bresaola jerky. Capicola hamburger leberkas <em>this text is emphasised</em> corned beef turkey, pancetta landjaeger turducken sirloin.</p>
+		<p>Paragraph text - Bacon ipsum dolor amet spare ribs brisket hamburger chicken shank sirloin pastrami shoulder bresaola jerky. Capicola hamburger leberkas corned beef turkey, <a href="#">this is a link</a> pancetta landjaeger turducken sirloin. Fatback filet mignon salami pig landjaeger pork <strong>this text is strong</strong> chop ribeye pork brisket kevin tail jerky beef ribs. Biltong <em>this text is emphasised</em> pig landjaeger andouille frankfurter tri-tip swine spare ribs boudin doner bresaola ribeye ball tip venison turkey. Salami cow biltong flank pork loin ground round.</p>
+		<p><small>Small paragraph text - Bacon ipsum dolor amet spare ribs brisket hamburger chicken shank sirloin pastrami shoulder bresaola jerky. Capicola hamburger leberkas corned beef turkey, pancetta landjaeger turducken sirloin. Fatback filet <a href="#">this is a link</a> mignon salami pig landjaeger pork chop <em>this text is emphasised</em> ribeye pork brisket kevin tail jerky beef ribs. Biltong pig landjaeger andouille <strong>this text is strong</strong> frankfurter tri-tip swine spare ribs boudin doner bresaola ribeye ball tip venison turkey. Salami cow biltong flank pork loin ground round.</small></p>
+
+		<blockquote>
+			<p><%= lorem.paragraphs 1 %></p>
+			<p><%= lorem.paragraphs 1 %></p>
+		</blockquote>
+
+		<hr />
+
+		<p>
+			<span class="thin">thin - </span>
+			<span class="extralight">extralight - </span>
+			<span class="light">light - </span>
+			<span class="regular">regular - </span>
+			<span class="medium">medium - </span>
+			<span class="semibold">semibold - </span>
+			<span class="bold">bold - </span>
+			<span class="extrabold">extrabold - </span>
+			<span class="ultrabold">ultrabold</span>
+		</p>
+
+		<hr />
+
+		<ul class="defaultul">
+			<li>Unordered list item have no styling by default.</li>
+			<li>Unordered list item have no styling by default.</li>
+			<li>Unordered list item have no styling by default.</li>
+		</ul>
+
+		<ul class="defaultul  square">
+			<li>Unordered list item have no styling by default.</li>
+			<li>Unordered list item have no styling by default.</li>
+			<li>Unordered list item have no styling by default.</li>
+		</ul>
+
+		<ul class="defaultul  circle">
+			<li>Unordered list item have no styling by default.</li>
+			<li>Unordered list item have no styling by default.</li>
+			<li>Unordered list item have no styling by default.</li>
+		</ul>
+
+		<ol class="defaultol">
+			<li>Ordered list item have no styling by default.</li>
+			<li>Ordered list item have no styling by default.</li>
+			<li>Ordered list item have no styling by default.</li>
+		</ol>
+	</section class="section">
+
+
+
+	<hr />
+	<section class="section" id="buttons">
+		<h2>Buttons</h2>
+
+		<p><pre><code>class="btn  btn--[color]"</code></pre></p>
+		<p>
+			<a href="javascript:void(0)" class="btn">Button Default</a>
+			<a href="javascript:void(0)" class="btn  btn--primary">Button primary</a>
+			<a href="javascript:void(0)" class="btn  btn--secondary">Button secondary</a>
+		</p>
+
+		<p><pre><code>class="btn  btn--small"</code></pre></p>
+		<p>
+			<a href="javascript:void(0)" class="btn  btn--small">Button Default</a>
+			<a href="javascript:void(0)" class="btn  btn--primary  btn--small">Button primary</a>
+			<a href="javascript:void(0)" class="btn  btn--secondary  btn--small">Button secondary</a>
+		</p>
+
+		<p><pre><code>class="btn  btn--large"</code></pre></p>
+		<p>
+			<a href="javascript:void(0)" class="btn  btn--large">Button Default</a>
+			<a href="javascript:void(0)" class="btn  btn--primary  btn--large">Button primary</a>
+			<a href="javascript:void(0)" class="btn  btn--secondary  btn--large">Button secondary</a>
+		</p>
+
+		<p><pre><code>class="btn  btn--caps"</code></pre></p>
+		<p>
+			<a href="javascript:void(0)" class="btn  btn--caps">Button Default</a>
+			<a href="javascript:void(0)" class="btn  btn--primary  btn--caps">Button primary</a>
+			<a href="javascript:void(0)" class="btn  btn--secondary  btn--caps">Button secondary</a>
+		</p>
+
+		<p><pre><code>class="btn  btn__border--[color]"</code></pre></p>
+		<p>
+			<a href="javascript:void(0)" class="btn">Button Default</a>
+			<a href="javascript:void(0)" class="btn  btn__border--primary">Button primary</a>
+			<a href="javascript:void(0)" class="btn  btn__border--secondary">Button secondary</a>
+		</p>
+
+		<p><pre><code>class="btn  btn__[icon]--before/after"</code></pre></p>
+		<p>
+			<a href="javascript:void(0)" class="btn  btn__back--before">Button Back</a>
+			<a href="javascript:void(0)" class="btn  btn__next--after">Button Next</a>
+		</p>
+
+		<p><pre><code>class="btn  btn--block"</code></pre></p>
+		<p>
+			<p><a href="javascript:void(0)" class="btn  btn--block">Button Default</a></p>
+			<p><a href="javascript:void(0)" class="btn  btn--primary  btn--block">Button primary</a></p>
+			<p><a href="javascript:void(0)" class="btn  btn--secondary  btn--block">Button secondary</a></p>
+		</p>
+	</section class="section">
+
+	<hr />
+
+	<section class="section" id="tables">
+		<h2>Tables</h2>
+		<p><pre><code>class options: table   table-striped  table-bordered  table-hover</code></pre></p>
+		<table class="table   table-striped  table-bordered  table-hover">
+			<thead>
+				<tr>
+					<th>Heading 1</th>
+					<th>Heading 2</th>
+					<th>Heading 3</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Text</td>
+					<td>123</td>
+					<td>123</td>
+				</tr>
+				<tr>
+					<td>Text</td>
+					<td>123</td>
+					<td>123</td>
+				</tr>
+				<tr>
+					<td>Text</td>
+					<td>123</td>
+					<td>123</td>
+				</tr>
+				<tr>
+					<td>Text</td>
+					<td>123</td>
+					<td>123</td>
+				</tr>
+				<tr>
+					<td>Text</td>
+					<td>123</td>
+					<td>123</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<hr />
+
+	<iframe src="https://ghbtns.com/github-btn.html?user=crazydesignsuk&repo=cdsass&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+
+</div>

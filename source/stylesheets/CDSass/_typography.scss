@@ -1,0 +1,163 @@
+///////////////////////////////////////
+//  Typography
+///////////////////////////////////////
+
+a {
+	color: $c-primary;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+// common vertical rhythm
+
+h1,h2,h3,h4,h5,h6,
+ul,ol,dl,
+fieldset,
+p,
+table,
+blockquote,
+pre,
+hr {
+	margin-bottom: $base-spacing;
+}
+
+// set header font
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $base-header-font;
+	font-weight: $bold;
+}
+
+// header sizes
+
+h1, .giga     	{ font-size: 108px; line-height: 108px; }
+h1, .mega 		{ font-size: 84px; line-height: 84px; }
+h1, .kilo 		{ font-size: 72px; line-height: 72px; }
+h1, .alpha		{ font-size: 48px; line-height: 48px; }
+h2, .beta 		{ font-size: 36px; line-height: 36px; }
+h3, .gamma 		{ font-size: 30px; line-height: 30px; }
+h4, .delta 		{ font-size: 24px; line-height: 24px; }
+h5, .epsilon 	{ font-size: 16px; line-height: 16px; }
+h6, .zeta 		{ font-size: 14px; line-height: 14px; }
+
+
+p.large {
+	font-size: 1.36em;
+}
+
+p small, p.small {
+	font-size: 0.8em;
+}
+
+// font weights
+
+.thin                       { font-weight: $thin; }
+.extralight, .extra-light   { font-weight: $extralight; }
+.light                      { font-weight: $light; }
+.regular                    { font-weight: $regular; }
+.medium                     { font-weight: $medium; }
+.semibold, .semi-bold       { font-weight: $semibold; }
+.bold, strong               { font-weight: $bold; }
+.extrabold, .extra-bold     { font-weight: $extrabold; }
+.ultrabold, .ultrabold      { font-weight: $ultrabold; }
+
+// text styling
+
+.t-caps         { text-transform: uppercase; }
+.t-left         { text-align: left; }
+.t-center       { text-align: center; }
+.t-right        { text-align: right; }
+.t-italic, em   { font-style: italic; }
+
+// lists
+
+%list {
+	margin-left: $base-spacing;
+	li {
+		line-height: $base-spacing;
+	}
+}
+
+.defaultul {
+	@extend %list;
+	list-style: disc;
+	&.square    { list-style: square; }
+	&.circle    { list-style: circle; }
+	&.none      { list-style: none; }
+}
+
+.defaultol {
+	@extend %list;
+	list-style: decimal;
+}
+
+.list--inline {
+	li {
+		display: inline-block;
+		margin-bottom: 0;
+		margin: 0 6px;
+		margin: 0 0.25em;
+	}
+}
+
+// code styling
+
+code, tt {
+	margin: 0 2px;
+	padding: 0 5px;
+	white-space: nowrap;
+	border: 1px solid #eaeaea;
+	background-color: #f8f8f8;
+	border-radius: 3px;
+	font-family: $fixed-font-family;
+}
+
+pre code {
+	margin: 0;
+	padding: 0;
+	white-space: pre;
+	border: none;
+	background: transparent;
+}
+
+.highlight pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	font-size: 13px;
+	line-height: 19px;
+	overflow: auto;
+	padding: 6px 10px;
+	border-radius: 3px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	font-size: 13px;
+	line-height: 19px;
+	overflow: auto;
+	padding: 6px 10px;
+	border-radius: 3px;
+}
+
+pre code, pre tt {
+	background-color: transparent;
+	border: none;
+}
+
+// blockquote
+
+blockquote {
+	border-left: 6px solid $c-tint-d-4;
+	padding: 0 $base-spacing;
+}
+
+blockquote > :first-child {
+	margin-top: 0;
+}
+
+blockquote > :last-child {
+	margin-bottom: 0;
+}

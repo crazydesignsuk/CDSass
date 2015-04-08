@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <title><%= current_page.data.title || "Blank Project" %></title>
+
+    <%= stylesheet_link_tag "style" %>
+
+    <!-- seo -->
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <link rel="canonical" href="">
+
+    <!-- facebook -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""/>
+
+    <!-- twitter - must validate for use!! -->
+    <meta name="twitter:card" content="Summary">
+    <meta name="twitter:site" content="@SiteName">
+    <meta name="twitter:creator" content="@AuthorHandle">
+    <meta name="twitter:title" content="Article Title ">
+    <meta name="twitter:description" content="Page Description">
+    <meta name="twitter:image:src" content="Image URL">
+
+    <%= yield_content :head %>
+
+</head>
+
+<body class="<%= page_classes %>">
+
+    <%= yield %>
+
+    <%= javascript_include_tag  "jquery-2.1.3.min", "jquery.leanModal.min", "app" %>
+    <%= yield_content :scripts %>
+
+</body>
+</html>

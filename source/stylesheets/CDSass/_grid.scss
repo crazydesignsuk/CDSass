@@ -1,0 +1,41 @@
+///////////////////////////////////////
+//  Grid
+///////////////////////////////////////
+
+
+.container {
+	width: 1120px;
+	margin: 0 auto $base-spacing;
+}
+
+.container700 {
+	background: $c-white;
+	width: 760px;
+	min-height: 50vh;
+	padding: $base-spacing * 2;
+	border-radius: 10px;
+	border: solid 1px $c-tint-d-4;
+	margin: 0 auto 100px;
+
+	& > h1 {
+		border-bottom: solid 2px $c-tint-d-4;
+		padding: $base-spacing 0;
+		margin-bottom: $base-spacing;
+	}
+
+	@include mobile {
+		width: 95%;
+		padding: $base-spacing;
+	}
+}
+
+.base-spacing {
+	margin-bottom: $base-spacing;
+}
+
+
+.row {
+	width: 100%;
+	position: relative;
+	@include clearfix;
+}

@@ -1,0 +1,173 @@
+//    ____ ____  ____                
+//   / ___|  _ \/ ___|  __ _ ___ ___ 
+//  | |   | | | \___ \ / _` / __/ __|
+//  | |___| |_| |___) | (_| \__ \__ \
+//   \____|____/|____/ \__,_|___/___/
+//   f r a m e w o r k
+
+
+// CDSass/cdsass.scss
+// ---|
+//    |--- reset
+//    |--- utility
+//    |--- grid
+//    |--- typography
+//    |--- buttons
+//    |--- tables 
+//    |--- forms
+
+
+@import "reset";		// css reset Eric Meyer v2
+@import "utility";		// mixins, functions and stuff
+@import "mediaqueries";
+
+@import "font-awesome";
+
+// variables
+
+
+///////////////////////////////////////
+//  COLOR VARIABLES
+///////////////////////////////////////
+
+// general colors
+
+$c-black:           #000000;
+$c-white:           #ffffff;
+$base-background:   #F2F4F5;
+$c-primary:         #2b85c1;
+$c-secondary:       #34495e;
+
+$c-table-border:	#eeeeee;
+
+// tint palette
+
+$c-tint-d-1: rgba(59,68,79,1);
+$c-tint-d-2: rgba(103,116,124,1);
+$c-tint-d-3: rgba(153,149,179,1);
+$c-tint-d-4: rgba(219,230,236,1);
+
+// alerts, warninings, info
+
+$c-success: #2ecc71;
+$c-alert:   #FA5E5B;
+$c-warning: #FFC83F;
+$c-info:    #8ABEE5;
+
+// code palette
+
+$c-code:    #2b303b;
+$c-code-bg: #c0c5ce;
+
+
+///////////////////////////////////////
+//  FONT VARIABLES
+///////////////////////////////////////
+
+// Font weights
+
+$thin:          100;
+$extralight:    200;
+$light:         300;
+$regular:       400;
+$medium:        500;
+$semibold:      600;
+$bold:          700;
+$extrabold:     800;
+$ultrabold:     900;
+
+// Base Font
+
+$base-font-family:	'Helvetica Neue', Arial, sans-serif;
+$base-font-weight:  $regular;
+$base-font-size:    16px;
+$base-line-height:  1.618;
+$base-header-font:	'Helvetica Neue', sans-serif;
+$base-font-color:	$c-tint-d-1;
+$base-spacing:		$base-font-size * $base-line-height;
+
+// Fixed Font
+
+$fixed-font-family: 'monaco', monospace;
+$fixed-font-size:	85%;
+$fixed-line-height:	$base-line-height;
+
+
+///////////////////////////////////////
+//  BUTTON VARIABLES
+///////////////////////////////////////
+
+$button-font-size:      14px;
+$button-font-large:     18px;
+$button-font-small:     11px;
+$button-font-weight:    $bold;
+$button-border-radius:  5px;
+$button-border-width:   2px;
+$button-time:           0.1s;
+
+
+///////////////////////////////////////
+//  IMPORT THE OTHER STUFF
+///////////////////////////////////////
+
+@import "grid";				// simple grid
+@import "typography";		// base typography
+@import "buttons";			// as it says
+@import "tables";			// as it says
+@import "forms";			// as it says
+@import "social";			// social classes
+
+
+///////////////////////////////////////
+//  SETTING DEFAULTS
+///////////////////////////////////////
+
+* {
+	@include borderbox;
+}
+
+html, body {
+	font-family:    $base-font-family;
+	font-weight:    $base-font-weight;
+	font-size:      $base-font-size;
+	line-height:    $base-line-height;
+	background:		$base-background;
+	color:          $base-font-color;
+}
+
+// hides text until typekit is fully loaded
+.wf-loading {
+	visibility: hidden;
+}
+
+img {
+	max-width: 100%;
+}
+
+.no-bottom-margin {
+	margin-bottom: 0;
+}
+
+$colors:
+(c-black,$c-black),
+(c-white, $c-white),
+(c-primary, $c-primary),
+(c-secondary, $c-secondary),
+(c-tint-d-1, $c-tint-d-1),
+(c-tint-d-2, $c-tint-d-2),
+(c-tint-d-3, $c-tint-d-3),
+(c-tint-d-4, $c-tint-d-4),
+(c-code, $c-code),
+(c-success, $c-success),
+(c-alert, $c-alert),
+(c-warning, $c-warning),
+(c-info, $c-info);
+
+@each $colorname, $color in $colors {
+	.#{$colorname} { color: $color }
+	.#{$colorname}-bg { background-color: $color }
+}
+
+section.section {
+	margin: 50px 0;
+}
