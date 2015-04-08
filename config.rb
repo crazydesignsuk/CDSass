@@ -11,6 +11,7 @@ set :partials_dir, 'partials'
 
 activate :directory_indexes
 activate :autoprefixer
+activate :relative_assets
 
 ::Compass.configuration.sass_options = { :line_comments => false, :style => :expanded }
 
@@ -25,11 +26,11 @@ end
 
 # deploy to github pages
 
-# activate :deploy do |deploy|
-  # deploy.method = :git
+activate :deploy do |deploy|
+  deploy.method = :git
   # Optional Settings
   # deploy.remote   = 'custom-remote'         # remote name or git url, default: origin
   # deploy.branch   = 'master'                # default: gh-pages
   # deploy.strategy = :submodule              # commit strategy: can be :force_push or :submodule, default: :force_push
   # deploy.commit_message = 'custom-message'	# commit message (can be empty)
-# end
+end
