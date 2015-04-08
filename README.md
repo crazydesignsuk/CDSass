@@ -5,3 +5,4 @@ CDSass is a collection of default styles to be used with my own web projects to 
 
 It contains default stylings for typography, buttons, tables, and a basic grid. Things can be changed in the main <code>CDSass.scss</code> file.
 
+Wanting to use it yourself? Grab the source from [github](https://github.com/crazydesignsuk/CDSass/tree/master/source/stylesheets/CDSass)
